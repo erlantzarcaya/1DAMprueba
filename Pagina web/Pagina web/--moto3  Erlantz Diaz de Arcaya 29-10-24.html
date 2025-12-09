@@ -1,0 +1,209 @@
+<!--Ejercicio 3... Erlantz Diaz de Arcaya 27-09-2024-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Compra venta de motos</title>
+    <style>
+        body {
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-areas:
+                "header header"
+                "menu menu"
+                "aside main"
+                "footer footer";
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            grid-area: header;
+            width: 100%;
+            background-image: url("motos.jpg");
+            border-bottom: 2px dashed black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        menu {
+            grid-area: menu;
+            margin: 0;
+            background: #FFFFFF;
+            border: 2px solid black;
+            list-style-type: none;
+            display: flex;
+            gap: 1em;
+            padding: 0.75em;
+        }
+        menu li {
+            margin: 0.75em 0;
+        }
+        aside {
+            grid-area: aside;
+            width: 250px;
+            background: #FFFFFF;
+            padding-left: 20px;
+        }
+        main {
+            grid-area: main;
+            background: #808080;
+            padding-left: 20px;
+        }
+        footer {
+            grid-area: footer;
+            height: 70px;
+            background: black;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1, h2, h3, p {
+            color: black;
+        }
+        h3, h4 {
+            font-size: 30px;
+        }
+        h5 {
+            border: 1px solid black;
+        }
+        table {
+            background-color: white;
+            margin: 1em 0;
+        }
+        td, th {
+            padding: 8px;
+        }
+        .info {
+            color: #eee;
+            margin: 2em 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Compra venta de motos</h1>
+        <h2>Vitoria-Gasteiz</h2>
+    </header>
+
+    <menu>
+        <li>
+            <a href="--Pagina principal web   Erlantz Diaz de Arcaya.html" >ATRAS</a>
+        </li>
+    </menu>
+
+    <aside>
+        <h4>Ninja 600cc</h4>
+        <div class="image-container">
+            <img src="moto3.png" alt="Ninja 600cc" style="max-width: 100%;">
+        </div>
+    </aside>
+
+    <main>
+        <form>
+            <h4>Venta ninja 600cc</h4>
+            <table border="2">
+                <tr>
+                    <th colspan="2">Formulario</th>
+                </tr>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="text" name="nombre" maxlength="50"></td>
+                </tr>
+                <tr>
+                    <td>Apellidos:</td>
+                    <td><input type="password" name="contrasena" maxlength="10"></td>
+                </tr>
+                <tr>
+                    <td>Descripción (si estás interesado en la venta de tu moto escribe aquí las características y la información de la moto)</td>
+                    <td><textarea cols="30" rows="5" name="descripcion"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Moto interesada (si no estás interesado y solo quieres vender tu moto marque la última opción):</td>
+                    <td>
+                        <label><input type="checkbox" name="lista1"> Rieju 49cc</label><br>
+                        <label><input type="checkbox" name="lista2"> Yamaha 125cc</label><br>
+                        <label><input type="checkbox" name="lista3"> Ninja 600cc</label><br>
+                        <label><input type="checkbox" name="lista4"> Honda 125</label><br>
+                        <label><input type="checkbox" name="lista5"> Ninguna(venta de moto)</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Borrar">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <div class="info">
+            <h3>Información sobre la ninja 600cc</h3>
+            <p>Arranque Eléctrico</p>
+            <p>Ninja: 600cc</p>
+            <p>Nº de cilindros: 1</p>
+            <p>Cilindrada: 600cc</p>
+            <p>Potencia máxima: 124 cv</p>
+            <p>Refrigeración: Líquida</p>
+            <hr>
+        </div>
+
+        <section class="compra">
+            <h3>Compra de moto</h3>
+            <form>
+                <table border="2">
+                    <tr>
+                        <th> <p colspan="2" ><h2>Datos del cliente</p></th>
+                    </tr>
+                    <tr>
+                        <td>Nombre y Apellidos:</td>
+                        <td><input type="text" name="nombre" maxlength="50"></td>
+                    </tr>
+                    <tr>
+                        <td>DNI:</td>
+                        <td><input type="text" name="dni" maxlength="9"></td>
+                    </tr>
+                    <tr>
+                        <td>Teléfono:</td>
+                        <td><input type="tel" name="telefono"></td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de nacimiento:</td>
+                        <td>
+                            <select name="dia">
+                                <!-- Los options se mantienen igual -->
+                            </select>
+                            <select name="mes">
+                                <!-- Los options se mantienen igual -->
+                            </select>
+                            <input type="number" name="año" min="1900" max="2024">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sexo:</td>
+                        <td>
+                            <label><input type="radio" name="sexo" value="hombre"> Hombre</label>
+                            <label><input type="radio" name="sexo" value="mujer"> Mujer</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="Enviar">
+                            <input type="reset" value="Borrar">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li>
+                <a href="--Pagina principal web   Erlantz Diaz de Arcaya.html" style="color:white;" >Volver a página principal</a>
+            </li>
+        </ul>
+        <!-- Add footer content if needed -->
+    </footer>
+</body>
+</html>
